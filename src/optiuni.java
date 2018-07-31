@@ -8,6 +8,7 @@ public class optiuni extends Thread{
 	public String filePath;
 	
 	fileReader reader=new fileReader();
+	Writer writer=new Writer();
 	
 	public void enter() {
 		System.out.println();
@@ -38,7 +39,7 @@ public class optiuni extends Thread{
     		File deleteFile=new File(filePath);
     		if(deleteFile.exists()) {
     			deleteFile.delete();
-    			System.out.println("Fisier sters cu suucces!");
+    			System.out.println("Fisier sters cu succes!");
     		}
     		else {
     			System.out.println("Fisierul nu a putut fi gasit!");
@@ -72,9 +73,35 @@ public class optiuni extends Thread{
 	    else if(alegereOptiuni==3) {
 	    	deleteFiles();
 	    }
-	    else if(alegereOptiuni==4){
+	    else if(alegereOptiuni==4) {
+	    	comenziBazaWriter();
+	    	enter();
+	    	reader.fileRead("instructiuni_creare_fisier_nou");
+	    	enter();
+	    	filePath=input.next();
+	    	writer.writeFile(filePath);
+	    	enter();
+	    	System.out.println("Fisierul a fost salvat!");
+	    	goToMenu();
+	    }
+	    else if(alegereOptiuni==5){
 	    	System.out.println("Programul a fost inchis!");
 	    	System.exit(0);
 	    }
 	}
+	
+	public void comenziBazaWriter() {
+		
+    		System.out.println("Ai vrea sa aflii comenzile de baza ale editorului?");
+    		System.out.println("1. Da");
+    		System.out.println("2. Nu, ma descurc si singur");
+    		alegereOptiuni=input.nextInt();
+    		if(alegereOptiuni==1) {
+    			reader.fileRead("comenzi_baza_writer");
+    		}
+    		else if(alegereOptiuni!=1 && alegereOptiuni!=2) {
+    			System.out.println("Raspunsul nu a putut fi recunoscut!");
+    			comenziBazaWriter();
+    		}
+    	}
 }

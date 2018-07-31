@@ -1,4 +1,5 @@
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
 
 public abstract class Reader {
 	public void fileRead(String name) {
