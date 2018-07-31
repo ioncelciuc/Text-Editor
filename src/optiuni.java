@@ -73,6 +73,7 @@ public class optiuni extends Thread{
 	    	deleteFiles();
 	    }
 	    else if(alegereOptiuni==4){
+	    	System.out.println("Programul a fost inchis!");
 	    	System.exit(0);
 	    }
 	}
