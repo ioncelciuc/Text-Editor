@@ -18,8 +18,8 @@ public class optiuni extends mainClass{
 	public void goToMenu() {
 		enter();
 		System.out.println("Tasteaza \\ urmat de enter pentru a reveni la meniul principal");
-		filePath=input.next();
-		if(filePath.equals("\\")) {
+		String detectBackslash=input.next();
+		if(detectBackslash.equals("\\")) {
 			enter();
 			runApp();
 		}
@@ -71,6 +71,9 @@ public class optiuni extends mainClass{
 	    }
 	    else if(alegereOptiuni==3) {
 	    	deleteFiles();
+	    }
+	    else if(alegereOptiuni==4){
+	    	System.exit(0);
 	    }
 	}
 }

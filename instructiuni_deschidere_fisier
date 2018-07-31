@@ -1,2 +1,3 @@
 Pentru a alege fisierul care sa fie deschis,scrie path-ul catre fisier.
-Exemplu: D:\\Documente\\Scoala\\fisier.txt
+Exemplu: D:/Documente/Scoala/fisier.txt
+Atentie! Fisierul, cat si folderele in care se afla acesta, nu trebuie sa contina in numele lor " ".

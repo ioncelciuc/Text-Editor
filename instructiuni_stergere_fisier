@@ -1,3 +1,4 @@
 Pentru a sterge un fisier, alege path-ul acestuia
-Exemplu: D:\\Documente\\Scoala\\fisier.txt
+Exemplu: D:/Documente/Scoala/fisier.txt
 ATENTIE! Odata ce un fisier e sters, acesta nu se va regasi in Recycle Bin!
+Atentie! Fisierul, cat si folderele in care se afla acesta, nu trebuie sa contina in numele lor " ".

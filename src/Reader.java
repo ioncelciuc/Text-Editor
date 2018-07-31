@@ -12,7 +12,7 @@ public abstract class Reader {
 		    }
 		    in.close();
 		}catch(Exception e) {
-				System.out.println("Error! The requested file could not be found!");
+				System.out.println("Eroare! Fisierul nu a putut fi gasit!");
 		}
 	}
 }
