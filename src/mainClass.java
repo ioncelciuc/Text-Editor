@@ -1,9 +1,16 @@
 
+
 public class mainClass {
+	
 
+	
 	public static void main(String[] args) {
-
-	    instructiuni instructiuni=new instructiuni();
-	    instructiuni.fileRead("instructiuni");
+	    
+	    optiuni x = new optiuni();
+	    x.runApp();
+	    
 	}
+	
+	
 }
+
