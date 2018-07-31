@@ -1,7 +1,7 @@
 import java.io.File;
 import java.util.Scanner;
 
-public class optiuni extends mainClass{
+public class optiuni extends Thread{
 	
 	Scanner input=new Scanner(System.in);
 	public int alegereOptiuni;
@@ -21,7 +21,7 @@ public class optiuni extends mainClass{
 		String detectBackslash=input.next();
 		if(detectBackslash.equals("\\")) {
 			enter();
-			runApp();
+			run();
 		}
 		else {
 			enter();
@@ -44,14 +44,14 @@ public class optiuni extends mainClass{
     			System.out.println("Fisierul nu a putut fi gasit!");
     		}
     		enter();
-    		runApp();
+    		run();
     	}catch(Exception e) {
     		System.out.println("A aparut o eroare neprevazuta la stergerea fisierelor!");
     		enter();
     	}
 	}
 	
-	public void runApp() {
+	public void run() {
 		
 	    reader.fileRead("menu");
 	    alegereOptiuni=input.nextInt();
