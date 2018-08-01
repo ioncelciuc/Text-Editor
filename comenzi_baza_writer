@@ -1,1 +1,6 @@
-Pentru a salva, scrie #save pe un rand nou
+Pentru a salva, scrie "#save" pe un rand nou
+Pentru a schimba fontul, scrie "#schimba font" pe un rand nou
+Pentru a schimba tipul fontului, scrie "#schimba tip font" pe un rand nou
+Pentru a schimba marime fontului, scrie "#schimba marime font" pe un rand nou
+Pentru a schimba culoarea textului, scrie "#schimba culoare text" pe un rand nou
+Pentru a schimba toate aspectele fontului, scrie "#schimba tot fontul" pe un rand nou

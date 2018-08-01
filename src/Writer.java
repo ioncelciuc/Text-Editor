@@ -24,7 +24,40 @@ public class Writer {
 			do {
 				System.setOut(fileOutput); //settam afisarea in fisier
 				text=input.nextLine();
-				if(! text.equals("#save")) fileOutput.println(text);
+				if(text.equals("#schimba font")) {
+					System.setOut(consoleOutput);
+					font.alegereFont();
+					System.setOut(fileOutput);
+					font.afisareAlegeri();
+				}
+				if(text.equals("#schimba tip font")) {
+					System.setOut(consoleOutput);
+					font.alegereTipFont();
+					System.setOut(fileOutput);
+					font.afisareAlegeri();
+				}
+				if(text.equals("#schimba marime font")) {
+					System.setOut(consoleOutput);
+					font.alegereMarimeFont();
+					System.setOut(fileOutput);
+					font.afisareAlegeri();
+				}
+				if(text.equals("#schimba culoare text")) {
+					System.setOut(consoleOutput);
+					font.alegereCuloareText();
+					System.setOut(fileOutput);
+					font.afisareAlegeri();
+				}
+				if(text.equals("#schimba tot fontul")) {
+					System.setOut(consoleOutput);
+					font.alegereFont();
+					font.alegereTipFont();
+					font.alegereMarimeFont();
+					font.alegereCuloareText();
+					System.setOut(fileOutput);
+					font.afisareAlegeri();
+				}
+				if(! text.equals("#save") && !text.equals("#schimba font") && !text.equals("#schimba tip font") && !text.equals("#schimba marime font") && !text.equals("#schimba culoare text") && !text.equals("#schimba tot fontul") ) fileOutput.println(text);
 			}while(! text.equals("#save"));
 			System.setOut(consoleOutput); //setam afisarea in consola
 		}catch(Exception e) {
