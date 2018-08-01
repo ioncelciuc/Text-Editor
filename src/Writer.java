@@ -11,8 +11,9 @@ public class Writer {
 		try {
 			PrintStream consoleOutput = System.out; //afisarea la consola
 			PrintStream fileOutput=new PrintStream(new File(path));	 //afisarea in fisier
-			System.out.println("Acum alege fontul, tipul acestuia, marimea si culoarea");
 			chooseFont font = new chooseFont();
+			System.out.println("Acum alege fontul, tipul acestuia, marimea si culoarea");
+			
 			font.alegereFont();
 			font.alegereTipFont();
 			font.alegereMarimeFont();
@@ -20,6 +21,7 @@ public class Writer {
 			System.setOut(fileOutput); //setam afisarea in fisier
 			font.afisareAlegeri();
 			System.setOut(consoleOutput); //setam afisarea in consola
+			
 			System.out.println("Acum poti scrie textul!\n\n\n");
 			do {
 				System.setOut(fileOutput); //settam afisarea in fisier

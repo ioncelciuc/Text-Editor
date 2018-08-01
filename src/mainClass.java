@@ -6,7 +6,6 @@ public class mainClass {
 	    Thread optiuni = new optiuni();
 	    optiuni.start();
 	    
-	    
 	}
 	
 }
