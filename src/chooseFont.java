@@ -133,7 +133,7 @@ public class chooseFont implements font {
 	}
 	
 	public void afisareAlegeri() {
-		System.out.println("##" + "Font: " + font + " ; Tip font: " + tipFont + " ; Marime font: " + marimeFont + " ; Culoare text: " + culoareText + "##\n\n\n");
+		System.out.println("## " + "Font: " + font + " ; Tip font: " + tipFont + " ; Marime font: " + marimeFont + " ; Culoare text: " + culoareText + " ##\n\n\n");
 	}
 	
 }
