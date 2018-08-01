@@ -9,7 +9,7 @@ public class Writer {
 	
 	public void writeFile(String path) {
 		try {
-			PrintStream stdout = System.out;
+			PrintStream consoleOutput = System.out;
 			PrintStream myconsole=new PrintStream(new File(path));	
 			System.out.println("Acum poti scrie textul!\n\n\n");
 			do {
@@ -17,7 +17,7 @@ public class Writer {
 				text=input.nextLine();
 				if(! text.equals("#save")) myconsole.println(text);
 			}while(! text.equals("#save"));
-			System.setOut(stdout);
+			System.setOut(consoleOutput);
 		}catch(Exception e) {
 			System.out.println(e);
 		}
