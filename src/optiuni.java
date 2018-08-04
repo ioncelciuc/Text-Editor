@@ -37,17 +37,17 @@ public class optiuni extends Thread{
 		filePath=input.next();
     	try {
     		File deleteFile=new File(filePath);
-    		if(deleteFile.exists()) {
-    			deleteFile.delete();
+    		
+    		if(deleteFile.delete()) {
     			System.out.println("Fisier sters cu succes!");
     		}
     		else {
-    			System.out.println("Fisierul nu a putut fi gasit!");
+    			System.out.println("Fisierul nu a putut fi sters!");
     		}
     		enter();
     		run();
     	}catch(Exception e) {
-    		System.out.println("A aparut o eroare neprevazuta la stergerea fisierelor!");
+    		System.out.println(e);
     		enter();
     	}
 	}
