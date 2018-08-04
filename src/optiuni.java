@@ -80,8 +80,6 @@ public class optiuni extends Thread{
 	    	enter();
 	    	filePath=input.next();
 	    	writer.writeFile(filePath);
-	    	enter();
-	    	System.out.println("Fisierul a fost salvat!");
 	    	goToMenu();
 	    }
 	    else if(alegereOptiuni==5){

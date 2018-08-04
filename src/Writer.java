@@ -1,7 +1,9 @@
 import java.io.File;
 import java.io.PrintStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Scanner;
-
+import java.nio.file.*;
 public class Writer {
 	
 	Scanner input = new Scanner(System.in);
@@ -62,6 +64,10 @@ public class Writer {
 				if(! text.equals("#save") && !text.equals("#schimba font") && !text.equals("#schimba tip font") && !text.equals("#schimba marime font") && !text.equals("#schimba culoare text") && !text.equals("#schimba tot fontul") ) fileOutput.println(text);
 			}while(! text.equals("#save"));
 			System.setOut(consoleOutput); //setam afisarea in consola
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println("Fisierul a fost salvat!");
 		}catch(Exception e) {
 			System.out.println(e);
 		}
