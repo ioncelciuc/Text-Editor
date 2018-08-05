@@ -6,24 +6,54 @@ public abstract class Writer {
 	
 	Scanner input = new Scanner(System.in);
 	String text="";
+	chooseFont font = new chooseFont();
+	
+	public void defaultFontChooser() {
+		System.out.println("Vrei sa iti alegi singur fontul sau sa il folosesti pe cel default?");
+		System.out.println("Font default: New Times Roman, Normal, 16, Negru");
+		System.out.println("1. Imi aleg singur fontul");
+		System.out.println("2. Folosesc fontul default");
+		int defaultFontChooser=input.nextInt();
+		if(defaultFontChooser == 1) {
+			System.out.println("Acum alege fontul, tipul acestuia, marimea si culoarea");
+			font.alegereFont();
+			font.alegereTipFont();
+			font.alegereMarimeFont();
+			font.alegereCuloareText();
+		}else if(defaultFontChooser == 2){
+			font.font="New Times Roman";
+			font.tipFont="Normal";
+			font.marimeFont=16;
+			font.culoareText="Negru";
+		}else {
+			System.out.println("Nu am recunoscut alegerea!");
+			defaultFontChooser();
+		}
+	}
 	
 	public void writeFile(String path) {
 		try {
 			PrintStream consoleOutput = System.out; //afisarea la consola
 			File fisierAles = new File(path);
+			
 			if(fisierAles.exists() && !fisierAles.isDirectory()) {
 					System.out.println("Fisierul exista deja!");
+					font.font="New Times Roman";
+					font.tipFont="Normal";
+					font.marimeFont=16;
+					font.culoareText="Negru";
 					File copycat=new File(path + ".txt");//cream un fisier copie
 					PrintStream copycatOutput=new PrintStream(new File(copycat.getPath()));//afisarea in fisierul copie
 					fileReader reader = new fileReader();
 					System.setOut(copycatOutput);
 					reader.fileRead(fisierAles.getPath());
+					font.afisareAlegeri();
 					System.setOut(consoleOutput);
 					System.out.println("Acum poti scrie textul in continuare!");
 					System.out.println();
 					System.out.println();
 					System.out.println();
-					chooseFont font = new chooseFont();
+					
 					do {
 						System.setOut(copycatOutput); //settam afisarea in fisier
 						text=input.nextLine();
@@ -77,17 +107,17 @@ public abstract class Writer {
 					
 			} else {
 				PrintStream fileOutput=new PrintStream(new File(path));	 //afisarea in fisier
-				chooseFont font = new chooseFont();
-				System.out.println("Acum alege fontul, tipul acestuia, marimea si culoarea");
-				font.alegereFont();
-				font.alegereTipFont();
-				font.alegereMarimeFont();
-				font.alegereCuloareText();
+				
+				defaultFontChooser(); //userul alege fontul default sau isi alege singur fontul
+				
 				System.setOut(fileOutput); //setam afisarea in fisier
 				font.afisareAlegeri();
 				System.setOut(consoleOutput); //setam afisarea in consola
 				
-				System.out.println("Acum poti scrie textul!\n\n\n");
+				System.out.println("Acum poti scrie textul!");
+				System.out.println();
+				System.out.println();
+				System.out.println();
 				do {
 					System.setOut(fileOutput); //settam afisarea in fisier
 					text=input.nextLine();
@@ -137,6 +167,4 @@ public abstract class Writer {
 				System.out.println(e);
 		}
 	}
-	
-	
 }
