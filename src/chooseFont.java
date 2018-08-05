@@ -4,10 +4,10 @@ public class chooseFont implements font {
 	
 	Scanner input = new Scanner(System.in);
 	public int alegere;
-	public String font;
-	public String tipFont;
-	public int marimeFont;
-	public String culoareText;
+	public String font = "New Times Roman";
+	public String tipFont = "Normal";
+	public int marimeFont = 16;
+	public String culoareText = "Negru";
 	
 	public void alegereFont() {
 		alegere=0;

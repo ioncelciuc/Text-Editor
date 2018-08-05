@@ -1,4 +1,4 @@
 Pentru a crea un nou fisier, alege destinatia acestuia.
 Exemplu: D:/Documente/Scoala/fisier.txt
 Atentie! Fisierul, cat si folderele in care se afla acesta, nu trebuie sa contina in numele lor " ".
-Daca fisierul deja exista, atunci textul va fi scris in continuarea acestuia!
+Daca fisierul deja exista, atunci textul va fi scris in continuarea acestuia, iar fontul va fi cel default (New Times Roman, Normal, 16, Negru).

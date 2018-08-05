@@ -8,7 +8,7 @@ public class optiuni extends Thread{
 	public String filePath;
 	
 	fileReader reader=new fileReader();
-	Writer writer=new Writer();
+	fileWriter writer=new fileWriter();
 	
 	public void enter() {
 		System.out.println();

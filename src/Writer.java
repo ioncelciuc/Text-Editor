@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.PrintStream;
 import java.util.Scanner;
 
-public class Writer {
+public abstract class Writer {
 	
 	Scanner input = new Scanner(System.in);
 	String text="";
@@ -79,7 +79,6 @@ public class Writer {
 				PrintStream fileOutput=new PrintStream(new File(path));	 //afisarea in fisier
 				chooseFont font = new chooseFont();
 				System.out.println("Acum alege fontul, tipul acestuia, marimea si culoarea");
-				
 				font.alegereFont();
 				font.alegereTipFont();
 				font.alegereMarimeFont();
