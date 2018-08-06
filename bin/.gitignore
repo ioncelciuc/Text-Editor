@@ -1,4 +1,8 @@
-/font.class
+/Reader.class
+/Writer.class
 /chooseFont.class
-/Editor.class
+/fileReader.class
 /fileWriter.class
+/font.class
+/mainClass.class
+/optiuni.class
